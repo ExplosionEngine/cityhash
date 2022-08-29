@@ -8,7 +8,7 @@ add_library(city ${SOURCES})
 target_include_directories(city PRIVATE ${CMAKE_BINARY_DIR})
 target_include_directories(city PUBLIC src)
 if (${MSVC})
-    target_compile_options(city PUBLIC /MT$<$<CONFIG:Debug>:d>)
+    target_compile_options(city PUBLIC /MD$<$<CONFIG:Debug>:d>)
 endif()
 
 add_custom_target(
